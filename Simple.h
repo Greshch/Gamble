@@ -9,6 +9,7 @@ public:
 	size_t GetAmountOfSimplesNums() const;
 	int GetSimpleByIndex(int id) const;
 	bool IsSimple(int num) const;
+	int GetRandomSimpleNum() const;
 
 private:
 	std::vector<int> mSimpleNums;

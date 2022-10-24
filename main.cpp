@@ -1,8 +1,8 @@
 #include "Gamble.h"
-#include "Simple.h"
+
 
 int main() {
-	Simple simple(50);
-	int guess = simple.GetSimpleByIndex(5);
+	Gamble gamble;
+	int guess = gamble.GetSecret();
 	return 0;
 }

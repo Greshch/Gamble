@@ -1,4 +1,6 @@
 #include "Simple.h"
+#include <ctime>
+
 Simple::Simple() : Simple(100) {
 }
 
@@ -16,6 +18,12 @@ int Simple::GetSimpleByIndex(int id) const {
 
 bool Simple::IsSimple(int num) const {
 	return std::binary_search(mSimpleNums.begin(), mSimpleNums.end(), num);
+}
+
+int Simple::GetRandomSimpleNum() const {
+	srand(time(nullptr));
+	int randIndex = rand() % GetAmountOfSimplesNums();
+	return GetSimpleByIndex(randIndex);
 }
 
 void Simple::GenerateNSimpleNums(int rightRange) {
