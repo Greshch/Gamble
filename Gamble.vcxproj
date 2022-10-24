@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="Gamble.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Simple.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Gamble.h" />
+    <ClInclude Include="Simple.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
