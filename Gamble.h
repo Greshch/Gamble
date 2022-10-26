@@ -8,7 +8,7 @@ public:
 	Gamble(int right);
 	int GetSecret() const;
 	void RandomGenerateTillRightRange(int rightRange);
-	void MakePrediction(std::string userName, int prediction);
+	void MakePrediction(std::string const& userName, int prediction);
 	std::string const& GetWinner()const;
 
 private:

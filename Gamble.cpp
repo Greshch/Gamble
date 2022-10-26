@@ -20,7 +20,7 @@ void Gamble::RandomGenerateTillRightRange(int rightRange) {
 	mSecret = simple.GetRandomSimpleNum();
 }
 
-void Gamble::MakePrediction(std::string userName, int prediction) {
+void Gamble::MakePrediction(std::string const& userName, int prediction) {
 	this->mUsersResponses.insert({ userName, prediction });
 }
 
