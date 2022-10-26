@@ -27,11 +27,11 @@ void Gamble::MakePrediction(std::string const& userName, int prediction) {
 void Gamble::SetWinners() {
 	/*
 	* What does it happens?
-	* Get winner from temporary vector<pair<string, int>.
-	* It was formed(copy) from map.
-	* And then this temp vector was sorted in order by more suitable users responses.
-	* Finaly this method returned the best response (exactly - name of user 
-	* the first element of winners)
+	* Get winner from map m_UsersResponses<pair<string, int>>.
+	* Using the next:
+	*		1) Copy from m_UsersResponses to vector<pair<string, int>> m_winers
+	*		2) Sort this one in order by best aproach to m_secret
+	*		3) remove bad elements - the rest of elements are true winners
 	*/
 	
 	for (auto const& e : m_usersResponses) {

@@ -24,7 +24,7 @@
     <ClCompile Include="Simple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PrintGambleResults.cpp">
+    <ClCompile Include="PrinterGambleResults.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <ClInclude Include="Simple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PrintGambleResults.h">
+    <ClInclude Include="PrinterGambleResults.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

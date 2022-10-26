@@ -141,12 +141,12 @@
   <ItemGroup>
     <ClCompile Include="Gamble.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="PrintGambleResults.cpp" />
+    <ClCompile Include="PrinterGambleResults.cpp" />
     <ClCompile Include="Simple.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Gamble.h" />
-    <ClInclude Include="PrintGambleResults.h" />
+    <ClInclude Include="PrinterGambleResults.h" />
     <ClInclude Include="Simple.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

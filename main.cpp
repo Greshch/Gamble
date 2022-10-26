@@ -1,4 +1,5 @@
 #include "Gamble.h"
+#include "PrinterGambleResults.h"
 #include <Windows.h>
 #include <iostream>
 #include <chrono>
@@ -48,6 +49,8 @@ int main() {
 		if (curTime > endTime) {
 			break;
 		}
+
+		std::cout << std::endl;
 		
 		EnterCriticalSection(&g_lock);
 		data.first = name;
@@ -72,7 +75,8 @@ int main() {
 
 	
 	g_gamble.SetWinners();
-	
+	PrinterGambleResults printer;
+	printer.Print(g_gamble);
 
 	DeleteCriticalSection(&g_lock);
 	return 0;

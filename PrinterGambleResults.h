@@ -2,7 +2,7 @@
 #include "Gamble.h"
 #include <iostream>
 
-class PrintGambleResults {
+class PrinterGambleResults {
 public:
 	void Print(Gamble const& gamble) const;
 };
