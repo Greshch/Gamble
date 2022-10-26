@@ -3,11 +3,6 @@
 #include <map>
 
 class Gamble {
-private:
-	int mSecret = 0;
-	std::map<std::string, int> mUsersResponses;
-
-
 public:
 	Gamble();
 	Gamble(int right);
@@ -15,5 +10,9 @@ public:
 	void RandomGenerateTillRightRange(int rightRange);
 	void MakePrediction(std::string userName, int prediction);
 	std::string GetWinner();
+
+private:
+	int mSecret = 0;
+	std::map<std::string, int> mUsersResponses;
 };
 
