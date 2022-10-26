@@ -1,7 +1,7 @@
 #include "Simple.h"
 #include <ctime>
 
-Simple::Simple() : Simple(100) {
+Simple::Simple() : Simple(defaultRightRange) {
 }
 
 Simple::Simple(int rightRange) {
@@ -9,15 +9,15 @@ Simple::Simple(int rightRange) {
 }
 
 size_t Simple::GetAmountOfSimplesNums() const {
-	return mSimpleNums.size();
+	return m_simpleNums.size();
 }
 
 int Simple::GetSimpleByIndex(int id) const {
-	return mSimpleNums[id];
+	return m_simpleNums[id];
 }
 
 bool Simple::IsSimple(int num) const {
-	return std::binary_search(mSimpleNums.begin(), mSimpleNums.end(), num);
+	return std::binary_search(m_simpleNums.begin(), m_simpleNums.end(), num);
 }
 
 int Simple::GetRandomSimpleNum() const {
@@ -28,21 +28,21 @@ int Simple::GetRandomSimpleNum() const {
 
 void Simple::GenerateNSimpleNums(int rightRange) {
 	for (int i = 0; i < rightRange; i++) {
-		mSimpleNums.push_back(i + 1);
+		m_simpleNums.push_back(i + 1);
 	}
 
 	for (int i = 2; i * i < rightRange; i++) {
 		for (int j = 0; j < rightRange; j++) {
-			if (mSimpleNums[j] != 0 && mSimpleNums[j] != i && mSimpleNums[j] % i == 0) {
-				mSimpleNums[j] = 0;
+			if (m_simpleNums[j] != 0 && m_simpleNums[j] != i && m_simpleNums[j] % i == 0) {
+				m_simpleNums[j] = 0;
 			}
 		}
 	}
 
-	auto newEnd = std::remove_if(mSimpleNums.begin(), mSimpleNums.end(), [](auto e) {
+	auto newEnd = std::remove_if(m_simpleNums.begin(), m_simpleNums.end(), [](auto e) {
 		return e == 0;
 		}
 	);
 
-	mSimpleNums.erase(newEnd, mSimpleNums.end());
+	m_simpleNums.erase(newEnd, m_simpleNums.end());
 }

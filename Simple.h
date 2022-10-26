@@ -12,7 +12,8 @@ public:
 	int GetRandomSimpleNum() const;
 
 private:
-	std::vector<int> mSimpleNums;
+	std::vector<int> m_simpleNums;
+	static const int defaultRightRange = 100;
 
 private:
 	void GenerateNSimpleNums(int rightRange);

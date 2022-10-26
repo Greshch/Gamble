@@ -12,7 +12,7 @@ public:
 	std::string const& GetWinner()const;
 
 private:
-	int mSecret = 0;
+	int m_secret = 0;
 	std::map<std::string, int> mUsersResponses;
 	static int const defaultRightRange = 50;
 };

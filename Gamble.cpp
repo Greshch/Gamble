@@ -12,12 +12,12 @@ Gamble::Gamble(int right) {
 }
 
 int Gamble::GetSecret() const {
-	return mSecret;
+	return m_secret;
 }
 
 void Gamble::RandomGenerateTillRightRange(int rightRange) {
 	Simple simple(rightRange);
-	mSecret = simple.GetRandomSimpleNum();
+	m_secret = simple.GetRandomSimpleNum();
 }
 
 void Gamble::MakePrediction(std::string const& userName, int prediction) {
@@ -38,12 +38,12 @@ std::string const& Gamble::GetWinner() const {
 		tmp.push_back(e);
 	}
 
-	int secret = mSecret;
+	int secret = m_secret;
 	std::sort(tmp.begin(), tmp.end(), [secret](auto const& left, auto const& right) {
 		return abs(left.second - secret) < abs(right.second - secret);
 		}
 	);
-	int bestDif = abs(tmp[0].second - mSecret);
+	int bestDif = abs(tmp[0].second - m_secret);
 	auto it = std::find_if(mUsersResponses.begin(), mUsersResponses.end(),
 		[bestDif, secret](auto const& e) {
 			return bestDif == abs(e.second - secret);
