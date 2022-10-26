@@ -49,6 +49,5 @@ std::string const& Gamble::GetWinner() const {
 			return bestDif == abs(e.second - secret);
 		}
 		);
-	//return tmp[0].first;
 	return it->first;
 }
