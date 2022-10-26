@@ -24,7 +24,7 @@ void Gamble::MakePrediction(std::string userName, int prediction) {
 	this->mUsersResponses.insert({ userName, prediction });
 }
 
-std::string Gamble::GetWinner() {
+std::string const& Gamble::GetWinner() const {
 	/*
 	* What does it happens?
 	* Get winner from temporary vector<pair<string, int>.
@@ -43,5 +43,12 @@ std::string Gamble::GetWinner() {
 		return abs(left.second - secret) < abs(right.second - secret);
 		}
 	);
-	return tmp[0].first;
+	int bestDif = abs(tmp[0].second - mSecret);
+	auto it = std::find_if(mUsersResponses.begin(), mUsersResponses.end(),
+		[bestDif, secret](auto const& e) {
+			return bestDif == abs(e.second - secret);
+		}
+		);
+	//return tmp[0].first;
+	return it->first;
 }

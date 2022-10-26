@@ -23,7 +23,7 @@ int main() {
 	int guess = g_gamble.GetSecret();
 	UsersData data;
 	
-	time_t const liveTime = 2 * 60;
+	time_t const liveTime = 2 * 2;
 	auto begin = std::chrono::system_clock::now();
 	time_t beginTime = std::chrono::system_clock::to_time_t(begin);
 	time_t curTime = std::chrono::system_clock::to_time_t(begin);
