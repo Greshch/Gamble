@@ -14,6 +14,6 @@ public:
 private:
 	int mSecret = 0;
 	std::map<std::string, int> mUsersResponses;
-
+	static int const defaultRightRange = 50;
 };
 

@@ -4,7 +4,7 @@
 #include <cmath>
 
 
-Gamble::Gamble() : Gamble(50) {
+Gamble::Gamble() : Gamble(defaultRightRange) {
 }
 
 Gamble::Gamble(int right) {
