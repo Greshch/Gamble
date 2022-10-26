@@ -23,7 +23,7 @@ int main() {
 	int guess = g_gamble.GetSecret();
 	UsersData data;
 	
-	time_t const liveTime = 2 * 5;
+	time_t const liveTime = 2 * 10;
 	auto begin = std::chrono::system_clock::now();
 	time_t beginTime = std::chrono::system_clock::to_time_t(begin);
 	time_t curTime = std::chrono::system_clock::to_time_t(begin);
@@ -70,8 +70,9 @@ int main() {
 		CloseHandle(threadHandle);
 	}
 
-	std::cout << "\n\nCongraulations, " << g_gamble.GetWinner() << "!\tsecret = " 
-		<< g_gamble.GetSecret() << std::endl;
+	
+	g_gamble.SetWinners();
+	
 
 	DeleteCriticalSection(&g_lock);
 	return 0;

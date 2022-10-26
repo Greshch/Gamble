@@ -24,12 +24,18 @@
     <ClCompile Include="Simple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PrintGambleResults.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Gamble.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Simple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintGambleResults.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
